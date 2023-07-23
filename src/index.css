@@ -14,7 +14,22 @@ code {
 
 .main {
   border: 1px solid black;
-  margin: 10px;
+  margin: 10px auto;
   padding: 10px;
+  max-width: 500px;
   min-height: 500px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: green;
+  align-self: center;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 500;
 }
