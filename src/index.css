@@ -55,3 +55,9 @@ code {
 .todo-date {
   margin: 10px 0;
 }
+
+.todo-date-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
