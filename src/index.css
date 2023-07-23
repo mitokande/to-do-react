@@ -33,3 +33,25 @@ code {
   color: white;
   font-weight: 500;
 }
+
+.todo-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #AED8CC;
+  margin: 10px 0;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #7A316F;
+}
+
+.todo-texts {
+  padding: 0;
+}
+
+.todo-title {
+  margin: 2px 0;
+}
+
+.todo-date {
+  margin: 10px 0;
+}
