@@ -22,7 +22,7 @@ export default function NewTask({ addTask }) {
                 <input className='form-control' onChange={(event) => setTaskDate(event.target.value)} />
             </div>
             <div className='form-group mb-2'>
-                <label>Task Date</label>
+                <label>Add Reminder</label>
                 <input type='checkbox' className='form-check' onChange={(event) => setReminder(event.target.checked)} />
             </div>
             <Button onClick={() => addTask(task)} title="Add" bgColor="green"></Button>

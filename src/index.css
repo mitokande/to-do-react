@@ -13,11 +13,12 @@ code {
 }
 
 .main {
-  border: 1px solid black;
+  border: 2px solid black;
   margin: 10px auto;
   padding: 10px;
   max-width: 500px;
   min-height: 500px;
+  border-radius: 12px;
 }
 
 .header {
