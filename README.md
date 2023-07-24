@@ -2,6 +2,7 @@
 
 The React To-Do App is a simple web application that allows users to create, manage, and organize their to-do lists. This project is built using React, a popular JavaScript library for building user interfaces.
 
+![React To-Do App Screenshot](images/todo_app_screenshot.png)
 ## Features
 
 - Add new tasks to the to-do list.
