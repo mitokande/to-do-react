@@ -23,10 +23,17 @@ export default function App() {
     setTodos(todos.filter((todo) => todo.id !== id))
     console.log(todos)
   }
+  const addTodo = (task) => {
+    const id = Math.floor(Math.random() * 1000) + 7;
+    const newTodo = { id, ...task }
+    setTodos([...todos, newTodo])
+    console.log(todos)
+
+  }
   return (
     <div className='main'>
       <Header></Header>
-      <NewTask></NewTask>
+      <NewTask addTask={addTodo} />
       <Todos tasks={todos} onDelete={deleteTodo} ></Todos>
     </div>
   )

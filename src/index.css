@@ -30,7 +30,7 @@ code {
   align-self: center;
   padding: 10px;
   border-radius: 15px;
-  color: white;
+  color: white !important;
   font-weight: 500;
 }
 

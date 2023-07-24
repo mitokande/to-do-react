@@ -1,12 +1,12 @@
 import React from 'react'
 import Button from './Button'
-import { FaRegCalendarAlt } from 'react-icons/fa'
+import { FaExclamationCircle, FaRegCalendarAlt } from 'react-icons/fa'
 
 export default function Todo({ todo, onDelete }) {
     return (
         <div className='todo-box'>
             <div className='todo-texts'>
-                <h3 className='todo-title'>{todo.text}</h3>
+                <h3 className='todo-title'>{todo.text}{todo.reminder ? (<FaExclamationCircle className='mx-2' color='red' />) : null}</h3>
                 <div className='todo-date-box'>
                     <FaRegCalendarAlt />
                     <p className='todo-date'>{todo.dateTime}</p>
