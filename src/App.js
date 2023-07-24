@@ -1,6 +1,7 @@
 import { React, useState } from 'react'
 import Header from './components/Header'
 import Todos from './components/Todos'
+import NewTask from './components/NewTask'
 
 export default function App() {
   const [todos, setTodos] = useState([
@@ -25,6 +26,7 @@ export default function App() {
   return (
     <div className='main'>
       <Header></Header>
+      <NewTask></NewTask>
       <Todos tasks={todos} onDelete={deleteTodo} ></Todos>
     </div>
   )
