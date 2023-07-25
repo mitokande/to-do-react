@@ -6,8 +6,9 @@ The React To-Do App is a simple web application that allows users to create, man
 ## Features
 
 - ~~Add new tasks to the to-do list.~~
-- Mark tasks as completed or uncompleted.
+- ~~Mark tasks as completed or uncompleted.~~
 - ~~Remove tasks from the to-do list.~~
+- ~~Delete all tasks~~
 - Filter tasks by their completion status (all, completed, or active).
 - Clear all completed tasks at once.
 
