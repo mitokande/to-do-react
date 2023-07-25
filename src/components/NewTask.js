@@ -9,7 +9,8 @@ export default function NewTask({ addTask }) {
     const task = {
         text: taskName,
         dateTime: taskDate,
-        reminder: taskReminder
+        reminder: taskReminder,
+        completed: false
     }
     return (
         <div>

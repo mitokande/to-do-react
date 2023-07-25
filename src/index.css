@@ -51,6 +51,8 @@ code {
 
 .todo-title {
   margin: 2px 0;
+  user-select: none;
+  cursor: pointer;
 }
 
 .todo-date {

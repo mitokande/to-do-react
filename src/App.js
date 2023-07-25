@@ -9,13 +9,15 @@ export default function App() {
       id: 1,
       text: 'Dentist Appointment!',
       dateTime: '13.02.2023 13:30',
-      reminder: true
+      reminder: true,
+      completed: false,
     },
     {
       id: 2,
       text: 'Homecoming',
       dateTime: '23.05.2023 18:30',
-      reminder: true
+      reminder: true,
+      completed: false,
     }
   ])
 
@@ -30,11 +32,20 @@ export default function App() {
     console.log(todos)
 
   }
+
+  const complete = (id) => {
+    setTodos(current => current.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed: true }
+      }
+      return todo
+    }))
+  }
   return (
     <div className='main'>
       <Header></Header>
       <NewTask addTask={addTodo} />
-      <Todos tasks={todos} onDelete={deleteTodo} ></Todos>
+      <Todos onComplete={complete} tasks={todos} onDelete={deleteTodo} ></Todos>
     </div>
   )
 }
