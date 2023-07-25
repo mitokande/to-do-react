@@ -41,11 +41,14 @@ export default function App() {
       return todo
     }))
   }
+  const deleteAll = () => {
+    setTodos([])
+  }
   return (
     <div className='main'>
       <Header></Header>
       <NewTask addTask={addTodo} />
-      <Todos onComplete={complete} tasks={todos} onDelete={deleteTodo} ></Todos>
+      <Todos onComplete={complete} tasks={todos} deleteAll={deleteAll} onDelete={deleteTodo} ></Todos>
     </div>
   )
 }
