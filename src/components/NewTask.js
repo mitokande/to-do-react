@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import Button from './Button'
 
 export default function NewTask({ addTask }) {
-    const [taskName, setTaskName] = useState("")
-    const [taskDate, setTaskDate] = useState("")
+    const [taskName, setTaskName] = useState("New Task")
+    const [taskDate, setTaskDate] = useState("No Date")
     const [taskReminder, setReminder] = useState(false)
 
     const task = {
