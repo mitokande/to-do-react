@@ -20,7 +20,7 @@ export default function NewTask({ addTask }) {
             </div>
             <div className='form-group mb-2'>
                 <label>Task Date</label>
-                <input className='form-control' onChange={(event) => setTaskDate(event.target.value)} />
+                <input type="date" className='form-control' onChange={(event) => setTaskDate(event.target.value)} />
             </div>
             <div className='form-group mb-2'>
                 <label>Add Reminder</label>
