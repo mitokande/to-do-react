@@ -4,18 +4,19 @@ import Todos from './components/Todos'
 import NewTask from './components/NewTask'
 
 export default function App() {
+  const [sortDesc, setSortDesc] = useState(0)
   const [todos, setTodos] = useState([
     {
       id: 1,
       text: 'Dentist Appointment!',
-      dateTime: '13.02.2023 13:30',
+      dateTime: '2023-05-29',
       reminder: true,
       completed: false,
     },
     {
       id: 2,
       text: 'Homecoming',
-      dateTime: '23.05.2023 18:30',
+      dateTime: '2023-06-29',
       reminder: true,
       completed: false,
     }
@@ -44,11 +45,29 @@ export default function App() {
   const deleteAll = () => {
     setTodos([])
   }
+
+  const sortAction = (type) => {
+    switch (type) {
+      case "asc":
+        setTodos([...todos.sort(function (a, b) {
+          return new Date(b.dateTime) - new Date(a.dateTime);
+        })])
+        break;
+      case "desc":
+        setTodos([...todos.sort(function (a, b) {
+          return new Date(b.dateTime) - new Date(a.dateTime);
+        })])
+        break;
+      default:
+        break;
+    }
+
+  }
   return (
     <div className='main'>
       <Header></Header>
       <NewTask addTask={addTodo} />
-      <Todos onComplete={complete} tasks={todos} deleteAll={deleteAll} onDelete={deleteTodo} ></Todos>
+      <Todos onComplete={complete} tasks={todos} deleteAll={deleteAll} sortAction={sortAction} onDelete={deleteTodo} ></Todos>
     </div>
   )
 }
